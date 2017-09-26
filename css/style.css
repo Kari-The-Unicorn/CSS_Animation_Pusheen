@@ -55,12 +55,9 @@ bottom:10px;
     animation: move_line 5s linear infinite;
   }
 @-webkit-keyframes move_line {
-    0% {
-    left: 150%;
-  }
-  100% {
-    left: 0;
-  }
+   0%   {left:0;}
+    50%  {left:84%;}
+    100% {left:0;}
 }
 
 @keyframes move_line {
@@ -69,35 +66,11 @@ bottom:10px;
     100% {left:0;}
 }
 
-.button_down {
-margin: 0 auto;
-
-}
-.button_down p{
-margin: 0 auto;
-border: 3px solid maroon;
-text-align: center;
-width: 170px;
-height: 50px;
-font-size: 20px;
-background-color: black;
-color: white;
-cursor: pointer;
-  outline: none;
-  border: none;
-  border-radius: 15px;
-}
-.button_down p:active {
-  background-color: black;
-  box-shadow: 0 5px darkgrey;
-  transform: translateY(4px);
-}
 .div_grass{ 
   position:absolute;
   bottom: 0;
-//transition-timing-function: ease-in-out;
- // transition: linear;
- /* transform: translateX(40%); */
+transition-timing-function: ease-in-out;
+ transition: linear;
 background-image: url('../image/rsz_grass.png');  
 height: 48px;     
 width: 100%;  
