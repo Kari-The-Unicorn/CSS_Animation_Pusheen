@@ -3,7 +3,7 @@
 Features:
 
  * Rotating sun
- * Falling leafs
+ * Falling leaves
  * Pusheen riding left to right in infinite loop
 
 Created with:
