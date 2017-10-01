@@ -1,28 +1,27 @@
 body {
-background: lightblue;  
+background: white;  
 font-family: Androgyne;  
-background-image: url('../image/rsz_leaf1.png');  
+background-image: url('../image/rain.png');  
 height: 100%;  
 left: 0;  
 top: 0;  
 width: 100%;  
--webkit-animation: snow 10s linear infinite; 
--moz-animation: snow 10s linear infinite; 
--ms-animation: snow 10s linear infinite; 
-animation: snow 10s linear infinite;  
-margin: 0;
+-webkit-animation: rain 10s linear infinite; 
+-moz-animation: rain 10s linear infinite; 
+-ms-animation: rain 10s linear infinite; 
+animation: rain 10s linear infinite;  
 }
-@keyframes snow { 
+@keyframes rain { 
 0% {background-position: 0px 0px, 0px 0px, 0px 0px;}  
 50% {background-position: 250px 250px, 50px 100px, -50px 75px;}  
 100% {background-position: 250px 500px, 100px 200px, -50px 150px;}  
 } 
+
 .div_right_up img{
 height: 20%;  
 right: 0;  
 top: 0;  
 width: 20%; 
-float:left;
  position: absolute;
 }
 .div_left_up img{
@@ -42,8 +41,7 @@ animation:round_round 12s linear infinite;
   100% { transform: rotate(360deg); }
 }
 .showbox {
-
-bottom:10px;
+      bottom: 10px;
     width: 217px;
     height: 230px;
     line-height: 60px;
@@ -66,6 +64,54 @@ bottom:10px;
     100% {left:0;}
 }
 
+.button_down {
+margin: 0 auto;
+
+}
+.button_down p{
+margin: 0 auto;
+border: 3px solid maroon;
+text-align: center;
+width: 170px;
+height: 50px;
+font-size: 20px;
+background-color: black;
+color: white;
+cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+.button_down p:active {
+  background-color: black;
+  box-shadow: 0 5px darkgrey;
+  transform: translateY(4px);
+}
+.div_tree{ 
+  position:absolute;
+  bottom: 0;
+}
+
+.div_tree:after{
+    content:"";
+    position:absolute;
+    top:280px;
+    left:0;
+    right:20px;
+    bottom:0;
+    padding: 10px 10px 10px 10px;
+    background-image: url('../image/leaves2.png'); 
+    z-index: -1;
+-webkit-animation: leaves 10s linear infinite; 
+-moz-animation: leaves 10s linear infinite; 
+-ms-animation: leaves 10s linear infinite; 
+animation: leaves 10s linear infinite;  
+}
+
+@keyframes leaves { 
+0% {background-position: 0px 0px;}  
+100% {background-position: 0px 250px;}
+} 
 .div_grass{ 
   position:absolute;
   bottom: 0;
@@ -74,7 +120,16 @@ transition-timing-function: ease-in-out;
 background-image: url('../image/rsz_grass.png');  
 height: 48px;     
 width: 100%;  
-transition: 10s ease-in-out;}
-.div_grass:hover {
-    transform: translate(200px,0);
-  }
+transition: 10s ease-in-out;
+}
+
+.div_rainbow {
+background-image: url('../image/rainbow.png');  
+background-repeat: no-repeat;
+position: absolute;
+bottom: 0;
+right:0px;
+height:400px;
+width:500px;
+z-index:-1;
+}
